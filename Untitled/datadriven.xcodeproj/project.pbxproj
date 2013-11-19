@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E8F5E25803AEB7C803A81C6F /* rb_main.rb */; };
+		4DDCA70A0ACC9A6100E082CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */; };
+		CA3E134A1312C2E300D74248 /* categories.pbxbtree in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13321312C2E300D74248 /* categories.pbxbtree */; };
+		CA3E134B1312C2E300D74248 /* cdecls.pbxbtree in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13331312C2E300D74248 /* cdecls.pbxbtree */; };
+		CA3E134C1312C2E300D74248 /* decls.pbxbtree in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13341312C2E300D74248 /* decls.pbxbtree */; };
+		CA3E134D1312C2E300D74248 /* files.pbxbtree in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13351312C2E300D74248 /* files.pbxbtree */; };
+		CA3E134E1312C2E300D74248 /* imports.pbxbtree in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13361312C2E300D74248 /* imports.pbxbtree */; };
+		CA3E134F1312C2E300D74248 /* pbxindex.header in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13371312C2E300D74248 /* pbxindex.header */; };
+		CA3E13501312C2E300D74248 /* protocols.pbxbtree in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13381312C2E300D74248 /* protocols.pbxbtree */; };
+		CA3E13511312C2E300D74248 /* refs.pbxbtree in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13391312C2E300D74248 /* refs.pbxbtree */; };
+		CA3E13521312C2E300D74248 /* control in Resources */ = {isa = PBXBuildFile; fileRef = CA3E133B1312C2E300D74248 /* control */; };
+		CA3E13531312C2E300D74248 /* strings in Resources */ = {isa = PBXBuildFile; fileRef = CA3E133C1312C2E300D74248 /* strings */; };
+		CA3E13541312C2E300D74248 /* subclasses.pbxbtree in Resources */ = {isa = PBXBuildFile; fileRef = CA3E133D1312C2E300D74248 /* subclasses.pbxbtree */; };
+		CA3E13551312C2E300D74248 /* symbols0.pbxsymbols in Resources */ = {isa = PBXBuildFile; fileRef = CA3E133E1312C2E300D74248 /* symbols0.pbxsymbols */; };
+		CA3E13561312C2E300D74248 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA3E133F1312C2E300D74248 /* InfoPlist.strings */; };
+		CA3E13571312C2E300D74248 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13411312C2E300D74248 /* MainMenu.nib */; };
+		CA3E13581312C2E300D74248 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13431312C2E300D74248 /* Info.plist */; };
+		CA3E13591312C2E300D74248 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3E13441312C2E300D74248 /* main.m */; };
+		CA3E135A1312C2E300D74248 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13451312C2E300D74248 /* Rakefile */; };
+		CA3E135B1312C2E300D74248 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = CA3E13461312C2E300D74248 /* rb_main.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDCA7120ACC9A6100E082CE /* datadriven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = datadriven.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3E13321312C2E300D74248 /* categories.pbxbtree */ = {isa = PBXFileReference; lastKnownFileType = file; path = categories.pbxbtree; sourceTree = "<group>"; };
+		CA3E13331312C2E300D74248 /* cdecls.pbxbtree */ = {isa = PBXFileReference; lastKnownFileType = file; path = cdecls.pbxbtree; sourceTree = "<group>"; };
+		CA3E13341312C2E300D74248 /* decls.pbxbtree */ = {isa = PBXFileReference; lastKnownFileType = file; path = decls.pbxbtree; sourceTree = "<group>"; };
+		CA3E13351312C2E300D74248 /* files.pbxbtree */ = {isa = PBXFileReference; lastKnownFileType = file; path = files.pbxbtree; sourceTree = "<group>"; };
+		CA3E13361312C2E300D74248 /* imports.pbxbtree */ = {isa = PBXFileReference; lastKnownFileType = file; path = imports.pbxbtree; sourceTree = "<group>"; };
+		CA3E13371312C2E300D74248 /* pbxindex.header */ = {isa = PBXFileReference; lastKnownFileType = file; path = pbxindex.header; sourceTree = "<group>"; };
+		CA3E13381312C2E300D74248 /* protocols.pbxbtree */ = {isa = PBXFileReference; lastKnownFileType = file; path = protocols.pbxbtree; sourceTree = "<group>"; };
+		CA3E13391312C2E300D74248 /* refs.pbxbtree */ = {isa = PBXFileReference; lastKnownFileType = file; path = refs.pbxbtree; sourceTree = "<group>"; };
+		CA3E133B1312C2E300D74248 /* control */ = {isa = PBXFileReference; lastKnownFileType = file; path = control; sourceTree = "<group>"; };
+		CA3E133C1312C2E300D74248 /* strings */ = {isa = PBXFileReference; lastKnownFileType = file; path = strings; sourceTree = "<group>"; };
+		CA3E133D1312C2E300D74248 /* subclasses.pbxbtree */ = {isa = PBXFileReference; lastKnownFileType = file; path = subclasses.pbxbtree; sourceTree = "<group>"; };
+		CA3E133E1312C2E300D74248 /* symbols0.pbxsymbols */ = {isa = PBXFileReference; lastKnownFileType = file; path = symbols0.pbxsymbols; sourceTree = "<group>"; };
+		CA3E13401312C2E300D74248 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA3E13421312C2E300D74248 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		CA3E13431312C2E300D74248 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA3E13441312C2E300D74248 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA3E13451312C2E300D74248 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		CA3E13461312C2E300D74248 /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		CA3E13471312C2E300D74248 /* datadriven.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = datadriven.xcodeproj; sourceTree = "<group>"; };
+		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
+		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DDCA70B0ACC9A6100E082CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */,
+				4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DDCA7120ACC9A6100E082CE /* datadriven.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Untitled */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E132E1312C2E300D74248 /* Untitled */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				4DDCA7110ACC9A6100E082CE /* Info.plist */,
+			);
+			name = Untitled;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				E8F5E25803AEB7C803A81C6F /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA3E132E1312C2E300D74248 /* Untitled */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E132F1312C2E300D74248 /* build */,
+				CA3E133F1312C2E300D74248 /* InfoPlist.strings */,
+				CA3E13411312C2E300D74248 /* MainMenu.nib */,
+				CA3E13431312C2E300D74248 /* Info.plist */,
+				CA3E13441312C2E300D74248 /* main.m */,
+				CA3E13451312C2E300D74248 /* Rakefile */,
+				CA3E13461312C2E300D74248 /* rb_main.rb */,
+				CA3E13471312C2E300D74248 /* datadriven.xcodeproj */,
+			);
+			name = Untitled;
+			sourceTree = "<group>";
+		};
+		CA3E132F1312C2E300D74248 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E13301312C2E300D74248 /* Untitled.build */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		CA3E13301312C2E300D74248 /* Untitled.build */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E13311312C2E300D74248 /* Untitled.pbxindex */,
+			);
+			path = Untitled.build;
+			sourceTree = "<group>";
+		};
+		CA3E13311312C2E300D74248 /* Untitled.pbxindex */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E13321312C2E300D74248 /* categories.pbxbtree */,
+				CA3E13331312C2E300D74248 /* cdecls.pbxbtree */,
+				CA3E13341312C2E300D74248 /* decls.pbxbtree */,
+				CA3E13351312C2E300D74248 /* files.pbxbtree */,
+				CA3E13361312C2E300D74248 /* imports.pbxbtree */,
+				CA3E13371312C2E300D74248 /* pbxindex.header */,
+				CA3E13381312C2E300D74248 /* protocols.pbxbtree */,
+				CA3E13391312C2E300D74248 /* refs.pbxbtree */,
+				CA3E133A1312C2E300D74248 /* strings.pbxstrings */,
+				CA3E133D1312C2E300D74248 /* subclasses.pbxbtree */,
+				CA3E133E1312C2E300D74248 /* symbols0.pbxsymbols */,
+			);
+			path = Untitled.pbxindex;
+			sourceTree = "<group>";
+		};
+		CA3E133A1312C2E300D74248 /* strings.pbxstrings */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E133B1312C2E300D74248 /* control */,
+				CA3E133C1312C2E300D74248 /* strings */,
+			);
+			path = strings.pbxstrings;
+			sourceTree = "<group>";
+		};
+		CA3E13751312C3C100D74248 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4DDCA7040ACC9A6100E082CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4DDCA7030ACC9A6100E082CE /* datadriven */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DDCA70E0ACC9A6100E082CE /* Build configuration list for PBXNativeTarget "datadriven" */;
+			buildPhases = (
+				4DDCA7040ACC9A6100E082CE /* Headers */,
+				4DDCA7050ACC9A6100E082CE /* Resources */,
+				4DDCA7090ACC9A6100E082CE /* Sources */,
+				4DDCA70B0ACC9A6100E082CE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = datadriven;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Untitled;
+			productReference = 4DDCA7120ACC9A6100E082CE /* datadriven.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4D7A7B570ABF745500C2D4C0 /* Build configuration list for PBXProject "datadriven" */;
+			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Untitled */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CA3E13751312C3C100D74248 /* Products */;
+					ProjectRef = CA3E13471312C2E300D74248 /* datadriven.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				4DDCA7030ACC9A6100E082CE /* datadriven */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DDCA7050ACC9A6100E082CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */,
+				4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */,
+				4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */,
+				CA3E134A1312C2E300D74248 /* categories.pbxbtree in Resources */,
+				CA3E134B1312C2E300D74248 /* cdecls.pbxbtree in Resources */,
+				CA3E134C1312C2E300D74248 /* decls.pbxbtree in Resources */,
+				CA3E134D1312C2E300D74248 /* files.pbxbtree in Resources */,
+				CA3E134E1312C2E300D74248 /* imports.pbxbtree in Resources */,
+				CA3E134F1312C2E300D74248 /* pbxindex.header in Resources */,
+				CA3E13501312C2E300D74248 /* protocols.pbxbtree in Resources */,
+				CA3E13511312C2E300D74248 /* refs.pbxbtree in Resources */,
+				CA3E13521312C2E300D74248 /* control in Resources */,
+				CA3E13531312C2E300D74248 /* strings in Resources */,
+				CA3E13541312C2E300D74248 /* subclasses.pbxbtree in Resources */,
+				CA3E13551312C2E300D74248 /* symbols0.pbxsymbols in Resources */,
+				CA3E13561312C2E300D74248 /* InfoPlist.strings in Resources */,
+				CA3E13571312C2E300D74248 /* MainMenu.nib in Resources */,
+				CA3E13581312C2E300D74248 /* Info.plist in Resources */,
+				CA3E135A1312C2E300D74248 /* Rakefile in Resources */,
+				CA3E135B1312C2E300D74248 /* rb_main.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DDCA7090ACC9A6100E082CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA70A0ACC9A6100E082CE /* main.m in Sources */,
+				CA3E13591312C2E300D74248 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		CA3E133F1312C2E300D74248 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA3E13401312C2E300D74248 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CA3E13411312C2E300D74248 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA3E13421312C2E300D74248 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D7A7B580ABF745500C2D4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		4D7A7B590ABF745500C2D4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		4DDCA70F0ACC9A6100E082CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = datadriven;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4DDCA7100ACC9A6100E082CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = datadriven;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D7A7B570ABF745500C2D4C0 /* Build configuration list for PBXProject "datadriven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7A7B580ABF745500C2D4C0 /* Debug */,
+				4D7A7B590ABF745500C2D4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DDCA70E0ACC9A6100E082CE /* Build configuration list for PBXNativeTarget "datadriven" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DDCA70F0ACC9A6100E082CE /* Debug */,
+				4DDCA7100ACC9A6100E082CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

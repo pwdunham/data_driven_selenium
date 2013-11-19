@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>get2DArray (XLS)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File xls.rb, line 102</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get2DArray</span>(<span class="ruby-identifier">myRange</span>,<span class="ruby-identifier">sheet</span>=<span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@log</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;get2DArray(myRange=#{myRange}, sheet = #{sheet}&quot;</span>)
+    <span class="ruby-identifier">myRange</span> = <span class="ruby-identifier">getRange</span>(<span class="ruby-identifier">myRange</span>,<span class="ruby-identifier">sheet</span>)
+    <span class="ruby-identifier">data</span> = []
+    <span class="ruby-identifier">areas</span> = []
+
+    <span class="ruby-comment cmt">#Deal with non-contigious regions by looping through each region.</span>
+    <span class="ruby-identifier">myRange</span>.<span class="ruby-constant">Areas</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">area</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">areas</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">area</span>.<span class="ruby-identifier">value</span> <span class="ruby-comment cmt">#get the data from each area</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">numRecords</span> = <span class="ruby-identifier">myRange</span>.<span class="ruby-constant">Rows</span>.<span class="ruby-constant">Count</span>
+    (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">numRecords</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">record</span>=[]
+      <span class="ruby-identifier">areas</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">area</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">record</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">area</span>[<span class="ruby-identifier">i</span>])
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-comment cmt">#Clean up formatting</span>
+      <span class="ruby-identifier">record</span>.<span class="ruby-identifier">collect!</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Float</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">%</span> <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+           <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">to_s</span>
+         <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">data</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">record</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">data</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

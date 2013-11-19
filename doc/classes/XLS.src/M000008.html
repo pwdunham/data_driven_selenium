@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>getRowRecords (XLS)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File xls.rb, line 64</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getRowRecords</span>(<span class="ruby-identifier">myRange</span>,<span class="ruby-identifier">sheet</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">convert2DArrayToArrayHash</span>(<span class="ruby-identifier">get2DArray</span>(<span class="ruby-identifier">myRange</span>,<span class="ruby-identifier">sheet</span>),<span class="ruby-keyword kw">true</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

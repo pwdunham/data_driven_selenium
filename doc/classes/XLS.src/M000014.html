@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>getRange (XLS)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File xls.rb, line 191</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getRange</span>(<span class="ruby-identifier">myRange</span>=<span class="ruby-value str">&quot;&quot;</span>,<span class="ruby-identifier">sheet</span>=<span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@log</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;getRange(myRange=#{myRange}, sheet=#{sheet}&quot;</span>)
+    <span class="ruby-identifier">worksheet</span> = <span class="ruby-identifier">getWorksheet</span>(<span class="ruby-identifier">sheet</span>)
+    <span class="ruby-comment cmt">#find where the data is</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">myRange</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">myRange</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+      <span class="ruby-identifier">rng</span>=<span class="ruby-identifier">worksheet</span>.<span class="ruby-constant">Range</span>(<span class="ruby-value str">&quot;A1&quot;</span>).<span class="ruby-constant">CurrentRegion</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-comment cmt">#use myRange as an excel range if it is one</span>
+        <span class="ruby-identifier">rng</span> = <span class="ruby-identifier">worksheet</span>.<span class="ruby-constant">Range</span>(<span class="ruby-identifier">myRange</span>)
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">WIN32OLERuntimeError</span>  <span class="ruby-comment cmt">#must not be a standard excel range...  look for the myRange.</span>
+        <span class="ruby-identifier">rng</span> = <span class="ruby-identifier">worksheet</span>.<span class="ruby-constant">Range</span>(<span class="ruby-value str">&quot;A1&quot;</span>,<span class="ruby-identifier">worksheet</span>.<span class="ruby-constant">UsedRange</span>.<span class="ruby-constant">SpecialCells</span>(<span class="ruby-value">11</span>)).<span class="ruby-constant">Find</span>(<span class="ruby-identifier">myRange</span>) <span class="ruby-comment cmt">#xlCellTypeLastCell</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;getRange(myRange=#{myRange}, sheet=#{sheet}) --&gt; Could not locate range via specified myRange.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">rng</span>
+        <span class="ruby-identifier">rng</span> = <span class="ruby-identifier">rng</span>.<span class="ruby-constant">Offset</span>(<span class="ruby-value">1</span>)
+        <span class="ruby-identifier">rng</span> = <span class="ruby-identifier">worksheet</span>.<span class="ruby-constant">Range</span>(<span class="ruby-identifier">rng</span>,<span class="ruby-identifier">rng</span>.<span class="ruby-constant">End</span>(<span class="ruby-value">-4121</span>)) <span class="ruby-comment cmt">#-4121 --&gt; xlDown</span>
+        <span class="ruby-identifier">rng</span> = <span class="ruby-identifier">worksheet</span>.<span class="ruby-constant">Range</span>(<span class="ruby-identifier">rng</span>,<span class="ruby-identifier">rng</span>.<span class="ruby-constant">End</span>(<span class="ruby-value">-4161</span>)) <span class="ruby-comment cmt">#-4161  --&gt; xlToRight</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rng</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

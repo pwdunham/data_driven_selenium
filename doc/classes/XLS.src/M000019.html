@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>write2DArray (XLS)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File xls.rb, line 259</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write2DArray</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">myRange</span>,<span class="ruby-identifier">sheet</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@log</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;write2DArray(data='...',myRange='#{myRange}', sheet = '#{sheet})'&quot;</span>)
+    <span class="ruby-identifier">worksheet</span> = <span class="ruby-identifier">getWorksheet</span>(<span class="ruby-identifier">sheet</span>)
+    <span class="ruby-comment cmt">#get the actual excel range object</span>
+    <span class="ruby-identifier">myRange</span> = <span class="ruby-identifier">worksheet</span>.<span class="ruby-constant">Range</span>(<span class="ruby-identifier">myRange</span>)
+    (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+      (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">data</span>[<span class="ruby-identifier">row</span>].<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">col</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">myRange</span>.<span class="ruby-constant">Offset</span>(<span class="ruby-identifier">row</span>,<span class="ruby-identifier">col</span>).<span class="ruby-identifier">value</span>=<span class="ruby-identifier">data</span>[<span class="ruby-identifier">row</span>][<span class="ruby-identifier">col</span>]
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

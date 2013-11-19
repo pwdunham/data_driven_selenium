@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: XLS</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">XLS</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/xls_rb.html">
+                xls.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Excel interface class. This class provides many simple methods to reading
+data records from Excel spreadsheets. Below is a bief example of how to use
+this class (see unit test (test_XLS.rb) for more usage examples)
+</p>
+<pre>
+ require 'xls'
+ xlFile = XLS.new('c:\myData.xls')
+ myData = xlFile.get2DArray('B1:D3','Sheet 1')
+ xlFile.close
+ doSomething(myData)
+</pre>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000016">addSheet</a>&nbsp;&nbsp;
+      <a href="#M000018">close</a>&nbsp;&nbsp;
+      <a href="#M000012">convert2DArrayToArrayHash</a>&nbsp;&nbsp;
+      <a href="#M000013">convertArrayHashTo2DArray</a>&nbsp;&nbsp;
+      <a href="#M000017">deleteSheet</a>&nbsp;&nbsp;
+      <a href="#M000010">get2DArray</a>&nbsp;&nbsp;
+      <a href="#M000009">getColumnRecords</a>&nbsp;&nbsp;
+      <a href="#M000011">getHash</a>&nbsp;&nbsp;
+      <a href="#M000014">getRange</a>&nbsp;&nbsp;
+      <a href="#M000008">getRowRecords</a>&nbsp;&nbsp;
+      <a href="#M000015">getWorksheet</a>&nbsp;&nbsp;
+      <a href="#M000007">new</a>&nbsp;&nbsp;
+      <a href="#M000021">save</a>&nbsp;&nbsp;
+      <a href="#M000022">save2DArraytoCSVFile</a>&nbsp;&nbsp;
+      <a href="#M000019">write2DArray</a>&nbsp;&nbsp;
+      <a href="#M000020">writeArrayHash</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Name</td>
+          <td>=</td>
+          <td class="context-item-value">sheetName</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">DisplayAlerts</td>
+          <td>=</td>
+          <td class="context-item-value">false</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">DisplayAlerts</td>
+          <td>=</td>
+          <td class="context-item-value">true</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">excel</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">workbook</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000007.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000007.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(file, debug = false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+initilize creates an <a href="XLS.html">XLS</a> instance for a given .xls
+file. If the File is already open in excel, data is read from the open file
+and left open after the call to the <a href="XLS.html#M000018">close</a>
+method. If the file is not open, It will be opened in the background and
+closed when the <a href="XLS.html#M000018">close</a> method is called.
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000016.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000016.html');return false;">
+          <span class="method-name">addSheet</span><span class="method-args">(sheetName)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Adds a <a href="XLS.html#M000007">new</a> worksheet to workbook
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000018.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000018.html');return false;">
+          <span class="method-name">close</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Closes Workbook if it was opened. Exits Excel if opened.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000012.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000012.html');return false;">
+          <span class="method-name">convert2DArrayToArrayHash</span><span class="method-args">(myArray,columnHeaders=true)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>myArray</b> should either have column or row headers to use as keys.
+columnHeader=false implies that there are row headers.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000013.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000013.html');return false;">
+          <span class="method-name">convertArrayHashTo2DArray</span><span class="method-args">(myArrayHash)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000017.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000017.html');return false;">
+          <span class="method-name">deleteSheet</span><span class="method-args">(sheetName)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Deletes a worksheet from the workbook
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000010.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000010.html');return false;">
+          <span class="method-name">get2DArray</span><span class="method-args">(myRange,sheet=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+returns a 2D Array representing the given range of Data stored in a given
+worksheet Note: All contiguious ranges are supported, however, only
+non-contigious column sellections of equal size are accepted.
+</p>
+<pre>
+ *myRange* can either be a string representing a range: &quot;A1:C4&quot;, a named range defined in the workbook: &quot;SomeNamedRange&quot;, or the text in a cell &quot;myRangeing&quot; a contigious table of values below it. If it is nil or not specified the CurrentRegion starting at &quot;A1&quot; is used.
+</pre>
+<p>
+EXAMPLE DATA:
+</p>
+<pre>
+           A                        B                      C
+  1        ID                   name                            nickname
+  2       001                Fredrick White           fred
+  3       002                    Robert Green             bob
+</pre>
+<p>
+RETURNS:
+</p>
+<pre>
+ Calling get2DArray(&quot;A1:C3&quot;) would return the following 2D array
+  [[ID, name, nickname],
+   [001, Fredrick White, fred],
+   [002, Robert Green, bob]]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000009.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000009.html');return false;">
+          <span class="method-name">getColumnRecords</span><span class="method-args">(myRange,sheet = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an array of hashes representing data records stored in rows in the
+given <b>myRange</b> and <b>sheet</b>.
+</p>
+<pre>
+ *myRange* can either be a string representing a range: &quot;A1:C4&quot;, a named range defined in the workbook: &quot;SomeNamedRange&quot;, or the text in a cell &quot;myRangeing&quot; a contigious table of values below it. If it is nil or not specified the CurrentRegion starting at &quot;A1&quot; is used.
+</pre>
+<p>
+Note: <b>myRange</b> should include headers, and may contain non-contigious
+column ranges of equal size EXAMPLE DATA:
+</p>
+<pre>
+           A                  B                           C
+  1        ID              001                          002
+  2       Name           Fredrick White                   Robert Green
+  3       NickName     fred                         bob
+</pre>
+<p>
+Standard Range Example:
+</p>
+<pre>
+ getColumnRecords(&quot;A1:C3&quot;) would return the following array of hashes:
+  [  {'ID'=&gt;'001', 'Name'=&gt;'Fredrick White', 'Nickname'=&gt;'fred'},
+     {'ID'=&gt;'002', 'Name'=&gt;'Robert Green', 'Nickname'=&gt;'bob'}  ]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000011.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000011.html');return false;">
+          <span class="method-name">getHash</span><span class="method-args">(myRange,sheet = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a hash of key-value pairs where the keys are pulled from column 1
+and the values are pulled form column 2 of <b>myRange</b> on <b>sheet</b>.
+</p>
+<pre>
+ *myRange* can either be a string representing a range: &quot;A1:C4&quot;, a named range defined in the workbook: &quot;SomeNamedRange&quot;, or the text in a cell &quot;labeling&quot; a contigious table of values below it. If it is nil or not specified the CurrentRegion starting at &quot;A1&quot; is used.
+</pre>
+<p>
+Note: &#8217;:&#8217;s are striped off of each key if they exist. EXAMPLE
+DATA:
+</p>
+<pre>
+           A                  B
+  1        ID              001
+  2       Name:           Fredrick White
+  3       NickName:    fred
+</pre>
+<p>
+Example usage:
+</p>
+<pre>
+ getHashFromRange(&quot;A1:B3&quot;) would return the following hash:
+  {'ID'=&gt;'001', 'Name'=&gt;'Fredrick White', 'Nickname'=&gt;'fred'}
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000014" class="method-detail">
+        <a name="M000014"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000014.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000014.html');return false;">
+          <span class="method-name">getRange</span><span class="method-args">(myRange=&quot;&quot;,sheet=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Searches for the first occurance of <b>myRange</b> on <b>sheet</b> and
+returns the address of the range representing the contigious set of cells
+below(xlDown) and to the right(xlRight) of <b>myRange</b> If <b>sheet</b>
+is not specified, the first sheet is used.
+</p>
+<pre>
+ *myRange* can either be a string representing a range: &quot;A1:C4&quot;, a named range defined in the workbook: &quot;SomeNamedRange&quot;, or the text in a cell &quot;myRangeing&quot; a contigious table of values below it. If it is nil or not specified the CurrentRegion starting at &quot;A1&quot; is used.
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000008.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000008.html');return false;">
+          <span class="method-name">getRowRecords</span><span class="method-args">(myRange,sheet = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns an array of hashes representing data records stored in rows in the
+given <b>myRange</b> and <b>sheet</b>.
+</p>
+<pre>
+ *myRange* can either be a string representing a range: &quot;A1:C4&quot;, a named range defined in the workbook: &quot;SomeNamedRange&quot;, or the text in a cell &quot;myRangeing&quot; a contigious table of values below it. If it is nil or not specified the CurrentRegion starting at &quot;A1&quot; is used.
+</pre>
+<p>
+Note: <b>myRange</b> should include headers, and may contain non-contigious
+column ranges of equal size EXAMPLE DATA:
+</p>
+<pre>
+           A                        B                      C
+  1        ID                   name                            nickname
+  2       001                Fredrick White           fred
+  3       002                    Robert Green             bob
+</pre>
+<p>
+Standard Range example:
+</p>
+<pre>
+ getRowRecords(&quot;A1:C3&quot;) would return the following array of hashes:
+  [  {'ID'=&gt;'001', 'Name'=&gt;'Fredrick White', 'Nickname'=&gt;'fred'},
+     {'ID'=&gt;'002', 'Name'=&gt;'Robert Green', 'Nickname'=&gt;'bob'}  ]
+</pre>
+<p>
+Non-Contigious Range Example:
+</p>
+<pre>
+ getRowRecords(&quot;A1:A3,C1:C3&quot;) would return the following array of hashes:
+  [  {'ID'=&gt;'001', 'Nickname'=&gt;'fred'},
+     {'ID'=&gt;'002', 'Nickname'=&gt;'bob'}  ]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000015.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000015.html');return false;">
+          <span class="method-name">getWorksheet</span><span class="method-args">(sheet=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000021.html');return false;">
+          <span class="method-name">save</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Saves the current workbook.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000022.html');return false;">
+          <span class="method-name">save2DArraytoCSVFile</span><span class="method-args">(myArray,file)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+outputs a 2DArray <b>myArray</b> to a CSV file specified by <b>file</b>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000019.html');return false;">
+          <span class="method-name">write2DArray</span><span class="method-args">(data, myRange,sheet = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+writes out the 2D Array <b>data</b> starting at the specified range
+<b>myRange</b> on the specified sheet
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="XLS.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('XLS.src/M000020.html');return false;">
+          <span class="method-name">writeArrayHash</span><span class="method-args">(data, myRange,sheet = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+writes out the Array hash <b>data</b> starting at the specified range
+<b>myRange</b> on the specified sheet. the keys are used as column headers
+starting at the specified range.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

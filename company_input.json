@@ -1,0 +1,24 @@
+{
+    "clients": {
+        "fluor": {
+            "env": "prod",
+            "version": "2",
+            "logins_success": "We've got plenty of jobs over"
+        },
+        "cbre": {
+            "env": "staging",
+            "version": "2",
+            "logins_success": ""
+        },
+         "publicstorage": {
+            "env": "staging",
+            "version": "2",
+            "logins_success": ""
+        },
+        "activision": {
+            "env": "prod",
+            "version": "2",
+            "logins_success": "Upload a Resume using one of the following:"
+        }
+    }
+}

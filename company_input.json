@@ -3,22 +3,113 @@
         "fluor": {
             "env": "prod",
             "version": "2",
-            "logins_success": "We've got plenty of jobs over"
+            "logins_success": "Upload a Resume using one of the following:",
+            "text_to_search": "product",
+            "number_to_search": "2",
+            "job_desc_1": "Responsibilities",
+            "job_desc_2": "Skills/Experience",
+            "job_desc_3": "Education Requirements",
+            "user_to_use": "jibe_tester_fluor@retailsx.com",
+            "pwd_to_use": "jibejibe1125",
+            "resume_user": "jibe_tester_fluor@retailsx.com",
+            "location_to_search": "CA"
         },
         "cbre": {
             "env": "staging",
             "version": "2",
-            "logins_success": ""
+            "logins_success": "Upload a Resume using one of the following:",
+            "text_to_search": "product",
+            "number_to_search": "2",
+            "job_desc_1": "Responsibilities",
+            "job_desc_2": "Skills/Experience",
+            "job_desc_3": "Education Requirements",
+            "user_to_use": "jibe_tester_cbre@retailsx.com",
+            "pwd_to_use": "Testing1",
+            "resume_user": "jibe_tester_cbre@retailsx.com",
+            "location_to_search": "CA"
         },
-         "publicstorage": {
+        "publicstorage": {
             "env": "staging",
             "version": "2",
-            "logins_success": ""
+            "logins_success": "Upload a Resume using one of the following:",
+            "text_to_search": "product",
+            "number_to_search": "2",
+            "job_desc_1": "Responsibilities",
+            "job_desc_2": "Skills/Experience",
+            "job_desc_3": "Education Requirements",
+            "user_to_use": "jibe_tester_publicstorage@retailsx.com",
+            "pwd_to_use": "Testing1",
+            "resume_user": "jibe_tester_publicstorage@retailsx.com",
+            "location_to_search": "CA"
         },
         "activision": {
             "env": "prod",
             "version": "2",
-            "logins_success": "Upload a Resume using one of the following:"
+            "logins_success": "Upload a Resume using one of the following:",
+            "text_to_search": "product",
+            "number_to_search": "2",
+            "job_desc_1": "Responsibilities",
+            "job_desc_2": "Skills/Experience",
+            "job_desc_3": "Education Requirements",
+            "user_to_use": "jibe_tester_activision@retailsx.com",
+            "pwd_to_use": "Testing1",
+            "resume_user": "jibe_tester_activision@retailsx.com",
+            "location_to_search": "CA"
+        },
+        "nestle": {
+            "env": "staging",
+            "version": "2",
+            "logins_success": "Upload a Resume using one of the following:",
+            "text_to_search": "product",
+            "number_to_search": "2",
+            "applyable_jobs": "http://Nestle.jobservice.staging.jibeapply.com/jobs/find/Nestle?applyableOnly=true",
+            "all_jobs": "http://Nestle.jobservice.staging.jibeapply.com/jobs/find/Nestle",
+            "job_desc_1": "Responsibilities",
+            "job_desc_2": "Skills/Experience",
+            "job_desc_3": "Education Requirements",
+            "user_to_use": "jibe_tester_nestle@retailsx.com",
+            "pwd_to_use": "Testing1",
+            "resume_user": "jibe_tester_nestle@retailsx.com",
+            "location_to_search": "CA"
+        },
+        "att": {
+            "env": "staging",
+            "version": "1",
+            "logins_success": "Upload a Resume using one of the following:",
+            "text_to_search": "product",
+            "number_to_search": "2",
+            "job_desc_1": "Responsibilities",
+            "job_desc_2": "Skills/Experience",
+            "job_desc_3": "Education Requirements",
+            "user_to_use": "jibe_tester_nestle@retailsx.com",
+            "pwd_to_use": "Testing1",
+            "resume_user": "jibe_tester_nestle@retailsx.com",
+            "location_to_search": "CA",
+            "ftp": "ftp.tmpwebeng.com",
+            "ftp.passive": "true",
+            "ftp_user": "ftpatttemp",
+            "ftp_password": "ftp!ttt5mp",
+            "ftp_filename": "ftpwwmatt.xml"
+        },
+        "comcast": {
+            "env": "staging",
+            "version": "2",
+            "logins_success": "Upload a Resume using one of the following:",
+            "text_to_search": "product",
+            "number_to_search": "2",
+            "job_desc_1": "Responsibilities",
+            "job_desc_2": "Skills/Experience",
+            "job_desc_3": "Education Requirements",
+            "user_to_use": "jibe_tester_comcast@retailsx.com",
+            "pwd_to_use": "jibejibe1124",
+            "resume_user": "jibe_tester_comcast@retailsx.com",
+            "location_to_search": "CA",
+            "ftp": "ftp.tmpwebeng.com",
+            "ftp.passive": "true",
+            "ftp_user": "ftpatttemp",
+            "ftp_password": "ftp!ttt5mp",
+            "ftp_filename": "ftpwwmatt.xml"
         }
     }
 }
+

@@ -4,30 +4,62 @@
 #-----------------------------------------------------------------------------#
 require "rubygems"
 require "test/unit" #for test cases
+
 require "selenium-webdriver"
 require 'json'
 require 'pp'
-json_contents = File.read('company_input.json')
 
-company = ARGV[0]
-parsed_data = JSON.parse(json_contents)
-puts parsed_data['clients'][company]['env']
-puts parsed_data['clients'][company]['version']
+$LOAD_PATH << File.dirname(__FILE__)
+$selected_company = ARGV[0]
+require 'browser_functions'  #json_contents = File.read('company_input.json')
+#$selected_company = $args[0]
 
-driver = Selenium::WebDriver.for :firefox
+#
+def setup()
+  json_contents = File.read('company_input.json')
+  puts "the client is #{$selected_company}"
+  parsed_data = JSON.parse(json_contents)
+  puts "parsed data"
+  puts parsed_data["clients"]["#{$selected_company}"]['env']
+  $env = parsed_data["clients"][$selected_company]['env']
+  puts "env = #{$env}"
+#  require 'browser_functions'  #json_contents = File.read('company_input.json')
+
+end
+
+#$environment =$args[0]
+#$selected_company = $args[0]
+#$browser = $args[2].to_sym
+#get_test_data(company)
+#parsed_data = JSON.parse(json_contents)
+#puts parsed_data["clients"]["#{company}"]['env']
+#env = parsed_data["clients"]["#{company}"]['env']
+#puts "the env is #{env}"
+
+#driver = Selenium::WebDriver.for :firefox
 
 #Loading the Company URL
-env ="#{company}.staging.jibeapply.com"
-driver.navigate.to env
-puts "env = " + $env
+if $env == 'prod'
+  test_url ="#{$selected_company}.jibeapply.com"
+  puts "test url is #{test_url}"
+else
+  test_url ="#{$selected_company}.#{$env}.jibeapply.com"
+  puts "test url is #{test_url}"
+end
+#@driver.get "http://#{test_url}"
+#
+#@driver.navigate.refresh
 
-$test_site = setupInfo["URL"]
-$username = setupInfo["User"]
-$password = setupInfo["Password"]
+#driver.navigate.to test_url
+abort("end")
+
+#$test_site = setupInfo["URL"]
+#$username = setupInfo["User"]
+#$password = setupInfo["Password"]
 
 #get today's date for use in later scripts
 $today = Time.now.month.to_s + "/" + Time.now.day.to_s + "/" + Time.now.year.to_s
-quit
+
 # open an IE browser
 #$ie = Watir::IE.new
 #$ie.speed = :zippy #available in Watir 1.5.6, for older versions use :fast

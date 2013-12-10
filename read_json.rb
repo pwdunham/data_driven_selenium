@@ -8,8 +8,8 @@ company = ARGV[0]
 parsed_data = JSON.parse(json_contents)
 
 
-#parsed_data['clients'].each do |company|
+parsed_data['clients'].each do |company|
 #  puts company
-#end
+end
   puts parsed_data['clients'][company]['env']
   puts parsed_data['clients'][company]['version']

@@ -21,7 +21,8 @@ EmailId.send_keys "sampleuser7f7df27@gmail.com"
 #Clicking on the Submit Button
 SubmitButton = driver.find_element(:id, "wp-submit")
 SubmitButton.click
-
+FindButton = driver.find_element(:xpath, "//button[@type='submit']")
+FindButton.click
 #Asserting whether the registration success message is diaplyed
 SuccessMessage = driver.find_element(:css, "p.message")
 "Registration complete. Please check your e-mail.".eql? SuccessMessage.text
